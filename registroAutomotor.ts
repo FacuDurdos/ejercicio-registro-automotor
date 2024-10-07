@@ -36,15 +36,15 @@ class RegistroAutomotor {
     }
 
     quitarAuto(nombre:string) {
-        this.autos = this.autos.filter(auto => auto.getNombre() !== nombre);
+        this.autos = this.autos.filter(auto => auto.getPatente() !== nombre);
     }
 
     quitarMoto(nombre:string) {
-        this.motos = this.motos.filter(moto => moto.getNombre() !== nombre);
+        this.motos = this.motos.filter(moto => moto.getPatente() !== nombre);
     }
 
     quitarCamion(nombre:string) {
-        this.camiones = this.camiones.filter(camion => camion.getNombre() !== nombre);
+        this.camiones = this.camiones.filter(camion => camion.getPatente() !== nombre);
     }
 
     getAuto() {
