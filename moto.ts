@@ -1,20 +1,21 @@
-export class Moto {
-    private nombreDueño:string;
-    private modelo:string;
-    private patente:string;
+import { Vehiculo } from "./Vehiculo";
 
-    constructor(nombreDueño:string, modelo:string, patente:string) {
-        this.nombreDueño = nombreDueño;
+export class Moto extends Vehiculo {
+    private nombreduenio:string;
+    private modelo:string;
+
+    constructor(patente:string,marca:string,anio:number,nombreduenio:string,modelo:string) {
+        super(patente,marca,anio)
+        this.nombreduenio = nombreduenio;
         this.modelo = modelo;
-        this.patente = patente;
     }
 
     getNombre() {
-        return this.nombreDueño;
+        return this.nombreduenio;
     }
 
     setNombre(nombre:string) {
-        this.nombreDueño = nombre;
+        this.nombreduenio = nombre;
     }
 
     getModelo() {
@@ -23,13 +24,5 @@ export class Moto {
 
     setModelo(modelo:string) {
         this.modelo = modelo;
-    }
-
-    getPatente() {
-        return this.patente;
-    }
-
-    setPatente(patente:string) {
-        this.patente = patente;
     }
 }

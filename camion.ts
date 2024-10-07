@@ -1,20 +1,23 @@
-export class Camion {
-    private nombreDueño:string;
-    private modelo:string;
-    private patente:string;
+import { Vehiculo } from "./Vehiculo";
 
-    constructor(nombreDueño:string, modelo:string, patente:string) {
-        this.nombreDueño = nombreDueño;
+export class Camion extends Vehiculo {
+    private nombreduenio:string;
+    private modelo:string;
+    private llevaCarga:boolean;
+
+    constructor(patente:string,marca:string,anio:number,nombreduenio:string,modelo:string,llevaCarga:boolean) {
+        super(patente,marca,anio)
+        this.nombreduenio = nombreduenio;
         this.modelo = modelo;
-        this.patente = patente;
+        this.llevaCarga = llevaCarga
     }
 
     getNombre() {
-        return this.nombreDueño;
+        return this.nombreduenio;
     }
 
     setNombre(nombre:string) {
-        this.nombreDueño = nombre;
+        this.nombreduenio = nombre;
     }
 
     getModelo() {
@@ -25,11 +28,11 @@ export class Camion {
         this.modelo = modelo;
     }
 
-    getPatente() {
-        return this.patente;
+    setLlevaCarga() {
+        return this.llevaCarga;
     }
 
-    setPatente(patente:string) {
-        this.patente = patente;
+    getLlevaCarga(llevaCarga:boolean) {
+        this.llevaCarga = llevaCarga;
     }
 }
