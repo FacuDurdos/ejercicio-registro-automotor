@@ -2,7 +2,7 @@ import { Auto } from "./auto";
 import { Moto } from "./moto";
 import { Camion } from "./camion";
 
-class RegistroAutomotor {
+export class RegistroAutomotor {
     private nombre:string;
     private autos:Auto[];
     private motos:Moto[];
